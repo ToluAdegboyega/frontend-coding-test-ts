@@ -1,0 +1,9 @@
+query FetchCharacters {
+  characters {
+    results {
+      id
+      image
+      name
+    }
+  }
+}

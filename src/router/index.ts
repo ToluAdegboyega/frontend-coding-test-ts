@@ -5,18 +5,9 @@ import {
   Router,
   RouteRecordRaw,
 } from 'vue-router'
-import LayoutMain from '../components/layout/LayoutMain.vue'
 import Error from '../views/Error.vue'
-import Home from '../views/Home.vue'
-
-const mainRoutes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'Home',
-    props: true,
-    component: Home,
-  },
-]
+import Characters from '../views/Characters.vue'
+import CharacterDetails from '../components/character/CharacterDetails.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -28,9 +19,15 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/',
+    name: 'Characters',
     props: true,
-    component: LayoutMain,
-    children: mainRoutes,
+    component: Characters,
+  },
+  {
+    path: '/character-details/:id',
+    name: 'CharacterDetails',
+    props: true,
+    component: CharacterDetails,
   },
 ]
 

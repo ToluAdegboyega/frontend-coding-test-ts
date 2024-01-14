@@ -1,0 +1,11 @@
+query FetchCharacter($id: ID!) {
+  character(id: $id) {
+    id
+    image
+    gender
+    created
+    name
+    species
+    status
+  }
+}

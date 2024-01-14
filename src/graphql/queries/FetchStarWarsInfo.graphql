@@ -1,0 +1,9 @@
+query FetchStarWarsInfo {
+  allSpecies {
+    edges {
+      node {
+        created
+      }
+    }
+  }
+}
